@@ -22,18 +22,6 @@ public interface NewsDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     long[] insertNews(NewsVO... news);
 
-//    @Insert(onConflict = OnConflictStrategy.IGNORE)
-//    long[] insertFavouriteAction(FavoriteActionVO... favoriteAction);
-//
-//    @Insert(onConflict = OnConflictStrategy.IGNORE)
-//    long[] insertCommentAction(CommentActionVO... commentAction);
-//
-//    @Insert(onConflict = OnConflictStrategy.IGNORE)
-//    long[] insertSentToAction(SentToVO... sentToAction);
-//
-//    @Insert(onConflict = OnConflictStrategy.IGNORE)
-//    long insertPublication(PublicationVO publication);
-
     @Query("SELECT * FROM news")
     LiveData<List<NewsVO>> getNews();
 

@@ -177,10 +177,10 @@ public class NewsListActivity extends BaseActivity
         startActivity(intent);
     }
 
-    @Subscribe(threadMode = ThreadMode.MAIN)
-    public void onNewsDataLoaded(RestApiEvents.NewsDataLoadedEvent event) {
-        mNewsAdapter.appendNewData(event.getLoadNews());
-    }
+//    @Subscribe(threadMode = ThreadMode.MAIN)
+//    public void onNewsDataLoaded(RestApiEvents.NewsDataLoadedEvent event) {
+//        mNewsAdapter.appendNewData(event.getLoadNews());
+//    }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onErrorInvokingAPI(RestApiEvents.ErrorInvokingAPIEvent event) {
